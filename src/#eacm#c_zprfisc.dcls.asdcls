@@ -1,0 +1,6 @@
+@EndUserText.label: '/EACM/C_ZPRFISC'
+@MappingRole: true
+define role /EACM/C_ZPRFISC {
+  grant select on /EACM/C_ZPRFISC
+  where INHERITING CONDITIONS FROM ENTITY /EACM/R_ZPRFISC REPLACING { ROOT WITH _BaseEntity };
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: '/EACM/R_ZPRFISC'
+@MappingRole: true
+define role /EACM/R_ZPRFISC {
+  grant select on /EACM/R_ZPRFISC
+  where TRUE;
+}

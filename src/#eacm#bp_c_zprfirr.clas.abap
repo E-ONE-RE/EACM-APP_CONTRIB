@@ -1,0 +1,5 @@
+CLASS /eacm/bp_c_zprfirr DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF /eacm/c_zprfirr.
+ENDCLASS.
+
+CLASS /eacm/bp_c_zprfirr IMPLEMENTATION.
+ENDCLASS.

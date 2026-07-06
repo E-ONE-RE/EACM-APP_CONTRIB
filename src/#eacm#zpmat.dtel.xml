@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/EACM/ZPMAT</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>/EACM/KOEIN</DOMNAME>
+    <HEADLEN>14</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>14</SCRLEN2>
+    <SCRLEN3>14</SCRLEN3>
+    <DDTEXT>Matured Amount</DDTEXT>
+    <REPTEXT>Matured Am</REPTEXT>
+    <SCRTEXT_S>Matured Am</SCRTEXT_S>
+    <SCRTEXT_M>Matured Amount</SCRTEXT_M>
+    <SCRTEXT_L>Matured Amount</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Importo Maturato</DDTEXT>
+     <REPTEXT>Importo Ma</REPTEXT>
+     <SCRTEXT_S>Importo Ma</SCRTEXT_S>
+     <SCRTEXT_M>Importo Maturat</SCRTEXT_M>
+     <SCRTEXT_L>Importo Maturato</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

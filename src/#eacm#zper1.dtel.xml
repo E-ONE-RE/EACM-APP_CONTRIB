@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/EACM/ZPER1</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <HEADLEN>17</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>17</SCRLEN3>
+    <DDTEXT>Period Percentage</DDTEXT>
+    <REPTEXT>Period Per</REPTEXT>
+    <SCRTEXT_S>Period Per</SCRTEXT_S>
+    <SCRTEXT_M>Period Percenta</SCRTEXT_M>
+    <SCRTEXT_L>Period Percent.</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <DATATYPE>DEC</DATATYPE>
+    <LENG>000005</LENG>
+    <DECIMALS>000002</DECIMALS>
+    <OUTPUTLEN>000006</OUTPUTLEN>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Percentuale Periodo</DDTEXT>
+     <REPTEXT>Percentual</REPTEXT>
+     <SCRTEXT_S>Percentual</SCRTEXT_S>
+     <SCRTEXT_M>Percentuale Per</SCRTEXT_M>
+     <SCRTEXT_L>Percentuale Periodo</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,184 @@
+managed implementation in class /EACM/BP_R_ZPREN unique;
+//managed with additional save implementation in class /EACM/BP_R_ZPREN unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for /EACM/R_ZPREN alias /eacm/rZpren
+persistent table /EACM/ZPREN
+extensible
+draft table /EACM/ZPREN_D
+etag master LocalLastChangedAt
+lock master total etag ChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Bukrs,
+   Gjahr,
+   Lifnr,
+   Zcdaz;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   ChangedBy,
+   ChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Gjahr,
+   Lifnr,
+   Zcdaz;
+
+
+  create;
+  update;
+  delete;
+
+//  action PostEnasarco parameter /EACM/A_POST_ENAS_PAR result [1] $self;
+  static action PostEnasarco parameter /EACM/A_POST_ENAS_PAR;
+  static action calculateEnasarco
+    parameter /eacm/A_CALC_ENAS_PAR;
+
+  static action GenerateEnasarcoOnline
+    parameter /EACM/A_EON_PAR;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for /EACM/ZPREN corresponding extensible
+  {
+    Bukrs = BUKRS;
+    Gjahr = GJAHR;
+    Lifnr = LIFNR;
+    Zcdaz = ZCDAZ;
+    Zwaer = ZWAER;
+    Zemat01 = ZEMAT_01;
+    Zemat02 = ZEMAT_02;
+    Zemat03 = ZEMAT_03;
+    Zemat1 = ZEMAT1;
+    Zecca01 = ZECCA_01;
+    Zecca02 = ZECCA_02;
+    Zecca03 = ZECCA_03;
+    Zecca1 = ZECCA1;
+    Zecef01 = ZECEF_01;
+    Zecef02 = ZECEF_02;
+    Zecef03 = ZECEF_03;
+    Zecef1 = ZECEF1;
+    Zecag01 = ZECAG_01;
+    Zecag02 = ZECAG_02;
+    Zecag03 = ZECAG_03;
+    Zecag1 = ZECAG1;
+    Zeccd01 = ZECCD_01;
+    Zeccd02 = ZECCD_02;
+    Zeccd03 = ZECCD_03;
+    Zeccd1 = ZECCD1;
+    Zever01 = ZEVER_01;
+    Zever02 = ZEVER_02;
+    Zever03 = ZEVER_03;
+    Zever1 = ZEVER1;
+    Zecon01 = ZECON_01;
+    Zecon02 = ZECON_02;
+    Zecon03 = ZECON_03;
+    Zecon1 = ZECON1;
+    Zemat04 = ZEMAT_04;
+    Zemat05 = ZEMAT_05;
+    Zemat06 = ZEMAT_06;
+    Zemat2 = ZEMAT2;
+    Zecca04 = ZECCA_04;
+    Zecca05 = ZECCA_05;
+    Zecca06 = ZECCA_06;
+    Zecca2 = ZECCA2;
+    Zecef04 = ZECEF_04;
+    Zecef05 = ZECEF_05;
+    Zecef06 = ZECEF_06;
+    Zecef2 = ZECEF2;
+    Zecag04 = ZECAG_04;
+    Zecag05 = ZECAG_05;
+    Zecag06 = ZECAG_06;
+    Zecag2 = ZECAG2;
+    Zeccd04 = ZECCD_04;
+    Zeccd05 = ZECCD_05;
+    Zeccd06 = ZECCD_06;
+    Zeccd2 = ZECCD2;
+    Zever04 = ZEVER_04;
+    Zever05 = ZEVER_05;
+    Zever06 = ZEVER_06;
+    Zever2 = ZEVER2;
+    Zecon04 = ZECON_04;
+    Zecon05 = ZECON_05;
+    Zecon06 = ZECON_06;
+    Zecon2 = ZECON2;
+    Zemat07 = ZEMAT_07;
+    Zemat08 = ZEMAT_08;
+    Zemat09 = ZEMAT_09;
+    Zemat3 = ZEMAT3;
+    Zecca07 = ZECCA_07;
+    Zecca08 = ZECCA_08;
+    Zecca09 = ZECCA_09;
+    Zecca3 = ZECCA3;
+    Zecef07 = ZECEF_07;
+    Zecef08 = ZECEF_08;
+    Zecef09 = ZECEF_09;
+    Zecef3 = ZECEF3;
+    Zecag07 = ZECAG_07;
+    Zecag08 = ZECAG_08;
+    Zecag09 = ZECAG_09;
+    Zecag3 = ZECAG3;
+    Zeccd07 = ZECCD_07;
+    Zeccd08 = ZECCD_08;
+    Zeccd09 = ZECCD_09;
+    Zeccd3 = ZECCD3;
+    Zever07 = ZEVER_07;
+    Zever08 = ZEVER_08;
+    Zever09 = ZEVER_09;
+    Zever3 = ZEVER3;
+    Zecon07 = ZECON_07;
+    Zecon08 = ZECON_08;
+    Zecon09 = ZECON_09;
+    Zecon3 = ZECON3;
+    Zemat10 = ZEMAT_10;
+    Zemat11 = ZEMAT_11;
+    Zemat12 = ZEMAT_12;
+    Zemat4 = ZEMAT4;
+    Zecca10 = ZECCA_10;
+    Zecca11 = ZECCA_11;
+    Zecca12 = ZECCA_12;
+    Zecca4 = ZECCA4;
+    Zecef10 = ZECEF_10;
+    Zecef11 = ZECEF_11;
+    Zecef12 = ZECEF_12;
+    Zecef4 = ZECEF4;
+    Zecag10 = ZECAG_10;
+    Zecag11 = ZECAG_11;
+    Zecag12 = ZECAG_12;
+    Zecag4 = ZECAG4;
+    Zeccd10 = ZECCD_10;
+    Zeccd11 = ZECCD_11;
+    Zeccd12 = ZECCD_12;
+    Zeccd4 = ZECCD4;
+    Zever10 = ZEVER_10;
+    Zever11 = ZEVER_11;
+    Zever12 = ZEVER_12;
+    Zever4 = ZEVER4;
+    Zecon10 = ZECON_10;
+    Zecon11 = ZECON_11;
+    Zecon12 = ZECON_12;
+    Zecon4 = ZECON4;
+    Zfpmat = ZFPMAT;
+    Zfprem = ZFPREM;
+    Zfspes = ZFSPES;
+    Zfbuto = ZFBUTO;
+    Zfcone = ZFCONE;
+    Zstre = ZSTRE;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    ChangedBy = CHANGED_BY;
+    ChangedAt = CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

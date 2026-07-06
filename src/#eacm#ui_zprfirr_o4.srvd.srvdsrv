@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for /EACM/C_ZPRFIRR'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: '/EACM/C_ZPRFIRR'
+  }
+}
+define service /EACM/UI_ZPRFIRR_O4
+  provider contracts odata_v4_ui {
+  expose /EACM/C_ZPRFIRR;
+}

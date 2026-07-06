@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/EACM/ZRFR</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>/EACM/KOEIN</DOMNAME>
+    <HEADLEN>09</HEADLEN>
+    <SCRLEN1>09</SCRLEN1>
+    <SCRLEN2>09</SCRLEN2>
+    <SCRLEN3>09</SCRLEN3>
+    <DDTEXT>FIRR Rate</DDTEXT>
+    <REPTEXT>FIRR Rate</REPTEXT>
+    <SCRTEXT_S>FIRR Rate</SCRTEXT_S>
+    <SCRTEXT_M>FIRR Rate</SCRTEXT_M>
+    <SCRTEXT_L>FIRR Rate</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Aliquota FIRR</DDTEXT>
+     <REPTEXT>Aliquota F</REPTEXT>
+     <SCRTEXT_S>Aliquota F</SCRTEXT_S>
+     <SCRTEXT_M>Aliquota FIRR</SCRTEXT_M>
+     <SCRTEXT_L>Aliquota FIRR</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

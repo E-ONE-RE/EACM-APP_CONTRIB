@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/EACM/ZCON3</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>/EACM/DEC3_2</DOMNAME>
+    <HEADLEN>19</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>19</SCRLEN3>
+    <DDTEXT>Contribution Rate 3</DDTEXT>
+    <REPTEXT>Contributi</REPTEXT>
+    <SCRTEXT_S>Contributi</SCRTEXT_S>
+    <SCRTEXT_M>Contribution Ra</SCRTEXT_M>
+    <SCRTEXT_L>Contribution Rate 3</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Aliquota Contribuzione 3</DDTEXT>
+     <REPTEXT>Aliquota C</REPTEXT>
+     <SCRTEXT_S>Aliquota C</SCRTEXT_S>
+     <SCRTEXT_M>Aliquota Contri</SCRTEXT_M>
+     <SCRTEXT_L>Aliquota Contribuzio</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

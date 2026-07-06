@@ -1,0 +1,570 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Bukrs'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Vkorg'
+annotate view /EACM/C_ZPRFIRR with
+{
+  @UI.facet: [
+    {
+      label: 'General Information',
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      position: 10,
+      type: #IDENTIFICATION_REFERENCE
+    },
+    {
+      label: 'Period 1',
+      id: 'Period1',
+      purpose: #STANDARD,
+      position: 20,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period1'
+    },
+    {
+      label: 'Period 2',
+      id: 'Period2',
+      purpose: #STANDARD,
+      position: 30,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period2'
+    },
+    {
+      label: 'Period 3',
+      id: 'Period3',
+      purpose: #STANDARD,
+      position: 40,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period3'
+    },
+    {
+      label: 'Period 4',
+      id: 'Period4',
+      purpose: #STANDARD,
+      position: 50,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period4'
+    },
+    {
+      label: 'Period 5',
+      id: 'Period5',
+      purpose: #STANDARD,
+      position: 60,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period5'
+    },
+    {
+      label: 'Period 6',
+      id: 'Period6',
+      purpose: #STANDARD,
+      position: 70,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period6'
+    },
+    {
+      label: 'Period 7',
+      id: 'Period7',
+      purpose: #STANDARD,
+      position: 80,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period7'
+    },
+    {
+      label: 'Period 8',
+      id: 'Period8',
+      purpose: #STANDARD,
+      position: 90,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period8'
+    },
+    {
+      label: 'Period 9',
+      id: 'Period9',
+      purpose: #STANDARD,
+      position: 100,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period9'
+    },
+    {
+      label: 'Period 10',
+      id: 'Period10',
+      purpose: #STANDARD,
+      position: 110,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period10'
+    },
+    {
+      label: 'Period 11',
+      id: 'Period11',
+      purpose: #STANDARD,
+      position: 120,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period11'
+    },
+    {
+      label: 'Period 12',
+      id: 'Period12',
+      purpose: #STANDARD,
+      position: 130,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Period12'
+    }
+  ]
+    @UI.identification: [ {
+      position: 15
+    } ]
+    @UI.lineItem: [
+      { position: 5, type: #FOR_ACTION, dataAction: 'CalculateFirr', label: 'Calcola FIRR' },
+      { position: 10, type: #FOR_ACTION, dataAction: 'PostFirr', label: 'Contabilizza FIRR' },
+      { position: 15 }
+    ]
+    @UI.selectionField: [ {
+      position: 15
+    } ]
+    @Consumption.valueHelpDefinition: [ {
+      entity: { name: '/EACM/R_T001', element: 'Bukrs' }
+    } ]
+    Bukrs;
+
+    @UI.identification: [ {
+      position: 20
+    } ]
+    @UI.lineItem: [ {
+      position: 20
+    } ]
+    @UI.selectionField: [ {
+      position: 20
+    } ]
+    @Consumption.valueHelpDefinition: [ {
+      entity: { name: '/EACM/I_TVKO', element: 'Vkorg' }
+    } ]
+    Vkorg;
+
+  @UI.identification: [ {
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  Gjahr;
+
+  @UI.identification: [ {
+    position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  @Consumption.valueHelpDefinition: [ {
+    entity: { name: '/EACM/I_ZPRAA', element: 'Zcdaz' }
+  } ]
+  Zcdaz;
+
+  @UI.identification: [ {
+    position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  Lifnr;
+
+  @UI.identification: [ {
+    position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60
+  } ]
+  Zfpmat;
+
+  @UI.identification: [ {
+    position: 70
+  } ]
+  @UI.lineItem: [ {
+    position: 70
+  } ]
+  Ztprc;
+
+  @UI.identification: [ {
+    position: 80
+  } ]
+  @UI.lineItem: [ {
+    position: 80
+  } ]
+  Ztpmf;
+
+  @UI.identification: [ {
+    position: 90
+  } ]
+  @UI.lineItem: [ {
+    position: 90
+  } ]
+  Zfbuto;
+
+  @UI.identification: [ {
+    position: 100
+  } ]
+  @UI.lineItem: [ {
+    position: 100
+  } ]
+  Mesi;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period1',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 110
+  } ]
+  Zfpmat1;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period1',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 120
+  } ]
+  Ztprc1;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period1',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 130
+  } ]
+  Zfbuto1;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period2',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 140
+  } ]
+  Zfpmat2;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period2',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 150
+  } ]
+  Ztprc2;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period2',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 160
+  } ]
+  Zfbuto2;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period3',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 170
+  } ]
+  Zfpmat3;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period3',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 180
+  } ]
+  Ztprc3;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period3',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 190
+  } ]
+  Zfbuto3;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period4',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 200
+  } ]
+  Zfpmat4;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period4',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 210
+  } ]
+  Ztprc4;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period4',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 220
+  } ]
+  Zfbuto4;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period5',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 230
+  } ]
+  Zfpmat5;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period5',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 240
+  } ]
+  Ztprc5;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period5',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 250
+  } ]
+  Zfbuto5;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period6',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 260
+  } ]
+  Zfpmat6;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period6',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 270
+  } ]
+  Ztprc6;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period6',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 280
+  } ]
+  Zfbuto6;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period7',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 290
+  } ]
+  Zfpmat7;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period7',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 300
+  } ]
+  Ztprc7;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period7',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 310
+  } ]
+  Zfbuto7;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period8',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 320
+  } ]
+  Zfpmat8;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period8',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 330
+  } ]
+  Ztprc8;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period8',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 340
+  } ]
+  Zfbuto8;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period9',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 350
+  } ]
+  Zfpmat9;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period9',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 360
+  } ]
+  Ztprc9;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period9',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 370
+  } ]
+  Zfbuto9;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period10',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 380
+  } ]
+  Zfpmat10;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period10',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 390
+  } ]
+  Ztprc10;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period10',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 400
+  } ]
+  Zfbuto10;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period11',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 410
+  } ]
+  Zfpmat11;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period11',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 420
+  } ]
+  Ztprc11;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period11',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 430
+  } ]
+  Zfbuto11;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period12',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 440
+  } ]
+  Zfpmat12;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period12',
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 450
+  } ]
+  Ztprc12;
+
+  @UI.fieldGroup: [ {
+    qualifier: 'Period12',
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 460
+  } ]
+  Zfbuto12;
+
+  @UI.identification: [ {
+    position: 470
+  } ]
+  @UI.lineItem: [ {
+    position: 470
+  } ]
+  Zfpmatc;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  ChangedBy;
+
+  @UI.hidden: true
+  ChangedAt;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 530,
+    label: '_BaseEntity'
+  } ]
+  @UI.hidden: true
+  _BaseEntity;
+}

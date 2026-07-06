@@ -1,0 +1,537 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Bukrs'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Bukrs'
+annotate view /EACM/C_ZPRFISC with
+{
+ @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  
+  
+    @UI.identification: [ {
+      position: 15
+    } ]
+    @UI.lineItem: [
+      { position: 5, type: #FOR_ACTION, dataAction: 'CalculateFisc', label: 'Calcola FISC' },
+      { position: 10, type: #FOR_ACTION, dataAction: 'PostFisc', label: 'Contabilizza FISC' },
+      { position: 15 }
+    ]
+    @UI.selectionField: [ {
+      position: 15
+    } ]
+ 
+  @Consumption.valueHelpDefinition: [ {
+      entity: { name: '/EACM/R_T001', element: 'Bukrs' }
+    } ]
+
+  Bukrs;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+    @Consumption.valueHelpDefinition: [ {
+      entity: { name: '/EACM/I_TVKO', element: 'Vkorg' }
+    } ]
+  Vkorg;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Gjahr;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  @Consumption.valueHelpDefinition: [ {
+    entity: { name: '/EACM/I_ZPRAA', element: 'Zcdaz' }
+  } ]
+  Zcdaz;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  Lifnr;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  Zimprv;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  Ztprc;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  Ztpmf;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  Zfisc;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  Mesi;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  Zimprv1;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  Ztprc1;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  Zfisc1;
+  
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  Zper1;
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  Zimprv2;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  Ztprc2;
+  
+  @UI.identification: [ {
+    position: 170 
+  } ]
+  @UI.lineItem: [ {
+    position: 170 
+  } ]
+  Zfisc2;
+  
+  @UI.identification: [ {
+    position: 180 
+  } ]
+  @UI.lineItem: [ {
+    position: 180 
+  } ]
+  Zper2;
+  
+  @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  Zimprv3;
+  
+  @UI.identification: [ {
+    position: 200 
+  } ]
+  @UI.lineItem: [ {
+    position: 200 
+  } ]
+  Ztprc3;
+  
+  @UI.identification: [ {
+    position: 210 
+  } ]
+  @UI.lineItem: [ {
+    position: 210 
+  } ]
+  Zfisc3;
+  
+  @UI.identification: [ {
+    position: 220 
+  } ]
+  @UI.lineItem: [ {
+    position: 220 
+  } ]
+  Zper3;
+  
+  @UI.identification: [ {
+    position: 230 
+  } ]
+  @UI.lineItem: [ {
+    position: 230 
+  } ]
+  Zimprv4;
+  
+  @UI.identification: [ {
+    position: 240 
+  } ]
+  @UI.lineItem: [ {
+    position: 240 
+  } ]
+  Ztprc4;
+  
+  @UI.identification: [ {
+    position: 250 
+  } ]
+  @UI.lineItem: [ {
+    position: 250 
+  } ]
+  Zfisc4;
+  
+  @UI.identification: [ {
+    position: 260 
+  } ]
+  @UI.lineItem: [ {
+    position: 260 
+  } ]
+  Zper4;
+  
+//  @UI.identification: [ {
+//    position: 270 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 270 
+//  } ]
+//  Zimprv5;
+//  
+//  @UI.identification: [ {
+//    position: 280 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 280 
+//  } ]
+//  Ztprc5;
+//  
+//  @UI.identification: [ {
+//    position: 290 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 290 
+//  } ]
+//  Zfisc5;
+//  
+//  @UI.identification: [ {
+//    position: 300 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 300 
+//  } ]
+//  Zper5;
+//  
+//  @UI.identification: [ {
+//    position: 310 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 310 
+//  } ]
+//  Zimprv6;
+//  
+//  @UI.identification: [ {
+//    position: 320 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 320 
+//  } ]
+//  Ztprc6;
+//  
+//  @UI.identification: [ {
+//    position: 330 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 330 
+//  } ]
+//  Zfisc6;
+//  
+//  @UI.identification: [ {
+//    position: 340 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 340 
+//  } ]
+//  Zper6;
+//  
+//  @UI.identification: [ {
+//    position: 350 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 350 
+//  } ]
+//  Zimprv7;
+//  
+//  @UI.identification: [ {
+//    position: 360 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 360 
+//  } ]
+//  Ztprc7;
+//  
+//  @UI.identification: [ {
+//    position: 370 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 370 
+//  } ]
+//  Zfisc7;
+//  
+//  @UI.identification: [ {
+//    position: 380 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 380 
+//  } ]
+//  Zper7;
+//  
+//  @UI.identification: [ {
+//    position: 390 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 390 
+//  } ]
+//  Zimprv8;
+//  
+//  @UI.identification: [ {
+//    position: 400 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 400 
+//  } ]
+//  Ztprc8;
+//  
+//  @UI.identification: [ {
+//    position: 410 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 410 
+//  } ]
+//  Zfisc8;
+//  
+//  @UI.identification: [ {
+//    position: 420 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 420 
+//  } ]
+//  Zper8;
+//  
+//  @UI.identification: [ {
+//    position: 430 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 430 
+//  } ]
+//  Zimprv9;
+//  
+//  @UI.identification: [ {
+//    position: 440 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 440 
+//  } ]
+//  Ztprc9;
+//  
+//  @UI.identification: [ {
+//    position: 450 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 450 
+//  } ]
+//  Zfisc9;
+//  
+//  @UI.identification: [ {
+//    position: 460 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 460 
+//  } ]
+//  Zper9;
+//  
+//  @UI.identification: [ {
+//    position: 470 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 470 
+//  } ]
+//  Zimprv10;
+//  
+//  @UI.identification: [ {
+//    position: 480 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 480 
+//  } ]
+//  Ztprc10;
+//  
+//  @UI.identification: [ {
+//    position: 490 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 490 
+//  } ]
+//  Zfisc10;
+//  
+//  @UI.identification: [ {
+//    position: 500 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 500 
+//  } ]
+//  Zper10;
+//  
+//  @UI.identification: [ {
+//    position: 510 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 510 
+//  } ]
+//  Zimprv11;
+//  
+//  @UI.identification: [ {
+//    position: 520 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 520 
+//  } ]
+//  Ztprc11;
+//  
+//  @UI.identification: [ {
+//    position: 530 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 530 
+//  } ]
+//  Zfisc11;
+//  
+//  @UI.identification: [ {
+//    position: 540 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 540 
+//  } ]
+//  Zper11;
+//  
+//  @UI.identification: [ {
+//    position: 550 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 550 
+//  } ]
+//  Zimprv12;
+//  
+//  @UI.identification: [ {
+//    position: 560 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 560 
+//  } ]
+//  Ztprc12;
+//  
+//  @UI.identification: [ {
+//    position: 570 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 570 
+//  } ]
+//  Zfisc12;
+//  
+//  @UI.identification: [ {
+//    position: 580 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 580 
+//  } ]
+//  Zper12;
+  
+
+  @UI.hidden: true
+  CreatedBy;
+  
+
+  @UI.hidden: true
+  CreatedAt;
+  
+
+  @UI.hidden: true
+  ChangedBy;
+  
+
+  @UI.hidden: true
+  ChangedAt;
+  
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 640 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 640 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.hidden: true
+  _BaseEntity;
+}

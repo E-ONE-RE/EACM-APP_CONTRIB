@@ -1,0 +1,23 @@
+projection implementation in class /EACM/BP_C_ZPRFIRR unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for /EACM/C_ZPRFIRR alias /eacm/cZprfirr
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use action CalculateFirr;
+  use action PostFirr;
+
+}

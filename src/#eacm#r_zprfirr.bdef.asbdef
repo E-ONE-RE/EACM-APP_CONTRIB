@@ -1,0 +1,107 @@
+managed implementation in class /EACM/BP_R_ZPRFIRR unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for /EACM/R_ZPRFIRR alias rZprfirr
+persistent table /EACM/ZPRFIRR
+extensible
+draft table /EACM/ZPRFIRR_D
+etag master LocalLastChangedAt
+lock master total etag ChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Bukrs,
+   Vkorg,
+   Gjahr,
+   Zcdaz;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   ChangedBy,
+   ChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Vkorg,
+   Gjahr,
+   Zcdaz;
+
+
+  create;
+  update;
+  delete;
+
+  static action CalculateFirr
+  parameter /eacm/a_firr_action_input
+  result [1] /eacm/a_firr_action_result;
+
+  static action PostFirr parameter /EACM/A_POST_FIRR_PAR;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for /EACM/ZPRFIRR corresponding extensible
+  {
+    Bukrs = BUKRS;
+    Vkorg = VKORG;
+    Gjahr = GJAHR;
+    Zcdaz = ZCDAZ;
+    Lifnr = LIFNR;
+    Waerk = WAERK;
+    Zfpmat = ZFPMAT;
+    Ztprc = ZTPRC;
+    Ztpmf = ZTPMF;
+    Zfbuto = ZFBUTO;
+    Mesi = MESI;
+    Zfpmat1 = ZFPMAT_1;
+    Ztprc1 = ZTPRC_1;
+    Zfbuto1 = ZFBUTO_1;
+    Zfpmat2 = ZFPMAT_2;
+    Ztprc2 = ZTPRC_2;
+    Zfbuto2 = ZFBUTO_2;
+    Zfpmat3 = ZFPMAT_3;
+    Ztprc3 = ZTPRC_3;
+    Zfbuto3 = ZFBUTO_3;
+    Zfpmat4 = ZFPMAT_4;
+    Ztprc4 = ZTPRC_4;
+    Zfbuto4 = ZFBUTO_4;
+    Zfpmat5 = ZFPMAT_5;
+    Ztprc5 = ZTPRC_5;
+    Zfbuto5 = ZFBUTO_5;
+    Zfpmat6 = ZFPMAT_6;
+    Ztprc6 = ZTPRC_6;
+    Zfbuto6 = ZFBUTO_6;
+    Zfpmat7 = ZFPMAT_7;
+    Ztprc7 = ZTPRC_7;
+    Zfbuto7 = ZFBUTO_7;
+    Zfpmat8 = ZFPMAT_8;
+    Ztprc8 = ZTPRC_8;
+    Zfbuto8 = ZFBUTO_8;
+    Zfpmat9 = ZFPMAT_9;
+    Ztprc9 = ZTPRC_9;
+    Zfbuto9 = ZFBUTO_9;
+    Zfpmat10 = ZFPMAT_10;
+    Ztprc10 = ZTPRC_10;
+    Zfbuto10 = ZFBUTO_10;
+    Zfpmat11 = ZFPMAT_11;
+    Ztprc11 = ZTPRC_11;
+    Zfbuto11 = ZFBUTO_11;
+    Zfpmat12 = ZFPMAT_12;
+    Ztprc12 = ZTPRC_12;
+    Zfbuto12 = ZFBUTO_12;
+    Waersc = WAERSC;
+    Zfpmatc = ZFPMATC;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    ChangedBy = CHANGED_BY;
+    ChangedAt = CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

@@ -1,0 +1,119 @@
+managed implementation in class /EACM/BP_R_ZPRFISC unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for /EACM/R_ZPRFISC alias /eacm/rZprfisc
+persistent table /EACM/ZPRFISC
+extensible
+draft table /EACM/ZPRFISC_D
+etag master LocalLastChangedAt
+lock master total etag ChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Bukrs,
+   Vkorg,
+   Gjahr,
+   Zcdaz;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   ChangedBy,
+   ChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Vkorg,
+   Gjahr,
+   Zcdaz;
+
+
+  create;
+  update;
+  delete;
+
+  static action CalculateFisc
+  parameter /eacm/a_firr_action_input
+  result [1] /eacm/a_firr_action_result;
+
+static action PostFisc
+  parameter /eacm/a_fisc_post_input
+  result [1] /eacm/a_fisc_action_result;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for /EACM/ZPRFISC corresponding extensible
+  {
+    Bukrs = BUKRS;
+    Vkorg = VKORG;
+    Gjahr = GJAHR;
+    Zcdaz = ZCDAZ;
+    Lifnr = LIFNR;
+    Waerk = WAERK;
+    Zimprv = ZIMPRV;
+    Ztprc = ZTPRC;
+    Ztpmf = ZTPMF;
+    Zfisc = ZFISC;
+    Mesi = MESI;
+    Zimprv1 = ZIMPRV_1;
+    Ztprc1 = ZTPRC_1;
+    Zfisc1 = ZFISC_1;
+    Zper1 = ZPER1;
+    Zimprv2 = ZIMPRV_2;
+    Ztprc2 = ZTPRC_2;
+    Zfisc2 = ZFISC_2;
+    Zper2 = ZPER2;
+    Zimprv3 = ZIMPRV_3;
+    Ztprc3 = ZTPRC_3;
+    Zfisc3 = ZFISC_3;
+    Zper3 = ZPER3;
+    Zimprv4 = ZIMPRV_4;
+    Ztprc4 = ZTPRC_4;
+    Zfisc4 = ZFISC_4;
+    Zper4 = ZPER4;
+    Zimprv5 = ZIMPRV_5;
+    Ztprc5 = ZTPRC_5;
+    Zfisc5 = ZFISC_5;
+    Zper5 = ZPER5;
+    Zimprv6 = ZIMPRV_6;
+    Ztprc6 = ZTPRC_6;
+    Zfisc6 = ZFISC_6;
+    Zper6 = ZPER6;
+    Zimprv7 = ZIMPRV_7;
+    Ztprc7 = ZTPRC_7;
+    Zfisc7 = ZFISC_7;
+    Zper7 = ZPER7;
+    Zimprv8 = ZIMPRV_8;
+    Ztprc8 = ZTPRC_8;
+    Zfisc8 = ZFISC_8;
+    Zper8 = ZPER8;
+    Zimprv9 = ZIMPRV_9;
+    Ztprc9 = ZTPRC_9;
+    Zfisc9 = ZFISC_9;
+    Zper9 = ZPER9;
+    Zimprv10 = ZIMPRV_10;
+    Ztprc10 = ZTPRC_10;
+    Zfisc10 = ZFISC_10;
+    Zper10 = ZPER10;
+    Zimprv11 = ZIMPRV_11;
+    Ztprc11 = ZTPRC_11;
+    Zfisc11 = ZFISC_11;
+    Zper11 = ZPER11;
+    Zimprv12 = ZIMPRV_12;
+    Ztprc12 = ZTPRC_12;
+    Zfisc12 = ZFISC_12;
+    Zper12 = ZPER12;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    ChangedBy = CHANGED_BY;
+    ChangedAt = CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

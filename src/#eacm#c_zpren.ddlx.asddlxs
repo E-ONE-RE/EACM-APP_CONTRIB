@@ -1,0 +1,668 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Bukrs'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Bukrs'
+annotate view /EACM/C_ZPREN with
+{
+
+    @UI.facet: [
+    {
+      label: 'General Information',
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      position: 10,
+      type: #IDENTIFICATION_REFERENCE
+    },
+    {
+      label: 'January',
+      id: 'Gennaio',
+      purpose: #STANDARD,
+      position: 20,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M01'
+    },
+    {
+      label: 'February',
+      id: 'Febbraio',
+      purpose: #STANDARD,
+      position: 30,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M02'
+    },
+    {
+      label: 'March',
+      id: 'Marzo',
+      purpose: #STANDARD,
+      position: 40,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M03'
+    },
+    {
+      label: '1st Quarter',
+      id: 'Trimestre1',
+      purpose: #STANDARD,
+      position: 50,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Q1'
+    },
+    {
+      label: 'April',
+      id: 'Aprile',
+      purpose: #STANDARD,
+      position: 60,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M04'
+    },
+    {
+      label: 'May',
+      id: 'Maggio',
+      purpose: #STANDARD,
+      position: 70,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M05'
+    },
+    {
+      label: 'June',
+      id: 'Giugno',
+      purpose: #STANDARD,
+      position: 80,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M06'
+    },
+    {
+      label: '2nd Quarter',
+      id: 'Trimestre2',
+      purpose: #STANDARD,
+      position: 90,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Q2'
+    },
+    {
+      label: 'July',
+      id: 'Luglio',
+      purpose: #STANDARD,
+      position: 100,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M07'
+    },
+    {
+      label: 'August',
+      id: 'Agosto',
+      purpose: #STANDARD,
+      position: 110,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M08'
+    },
+    {
+      label: 'September',
+      id: 'Settembre',
+      purpose: #STANDARD,
+      position: 120,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M09'
+    },
+    {
+      label: '3rd Quarter',
+      id: 'Trimestre3',
+      purpose: #STANDARD,
+      position: 130,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Q3'
+    },
+    {
+      label: 'October',
+      id: 'Ottobre',
+      purpose: #STANDARD,
+      position: 140,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M10'
+    },
+    {
+      label: 'November',
+      id: 'Novembre',
+      purpose: #STANDARD,
+      position: 150,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M11'
+    },
+    {
+      label: 'December',
+      id: 'Dicembre',
+      purpose: #STANDARD,
+      position: 160,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'M12'
+    },
+    {
+      label: '4th Quarter',
+      id: 'Trimestre4',
+      purpose: #STANDARD,
+      position: 170,
+      type: #FIELDGROUP_REFERENCE,
+      targetQualifier: 'Q4'
+    }
+  ]
+
+//  @UI.identification: [
+//  { position: 5, type: #FOR_ACTION, dataAction: 'calculateEnasarco', label: 'Calcola ENASARCO' },
+//  { position: 10, type: #FOR_ACTION, dataAction: 'PostEnasarco', label: 'Contabilizza' }
+
+//  ]
+ @UI.lineItem: [
+  { position: 5,    type: #FOR_ACTION,    dataAction: 'calculateEnasarco',    label: 'Calcole Enasarco' },
+  { position: 10,    type: #FOR_ACTION,   dataAction: 'PostEnasarco',   label: 'Post Enasarco' },
+  { position: 15,    type: #FOR_ACTION,   dataAction: 'GenerateEnasarcoOnline',   label: 'Enasaco on-line' },
+  { position: 20 }
+]  
+  @UI.identification: [ { position: 20 } ]
+  @UI.selectionField: [ { position: 20 } ]
+  @Consumption.valueHelpDefinition: [{
+    entity: {name: '/EACM/R_T001', element: 'Bukrs' }}]
+    
+  Bukrs;
+
+  @UI.identification: [ { position: 25 } ]
+  @UI.lineItem:       [ { position: 25 } ]
+  @UI.selectionField: [ { position: 25 } ]
+  Gjahr;
+
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem:       [ { position: 30 } ]
+  @UI.selectionField: [ { position: 30 } ]
+  Lifnr;
+
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem:       [ { position: 40 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  @Consumption.valueHelpDefinition: [{
+    entity: {name: '/EACM/I_ZPRAA', element: 'Zcdaz' }}]
+  Zcdaz;
+
+  @UI.identification: [ { position: 1240 } ]
+  @UI.lineItem:       [ { position: 1240 } ]
+  Zfpmat;
+
+  @UI.identification: [ { position: 1250 } ]
+  @UI.lineItem:       [ { position: 1250 } ]
+  Zfprem;
+
+  @UI.identification: [ { position: 1260 } ]
+  @UI.lineItem:       [ { position: 1260 } ]
+  Zfspes;
+
+  @UI.identification: [ { position: 1270 } ]
+  @UI.lineItem:       [ { position: 1270 } ]
+  Zfbuto;
+
+  @UI.identification: [ { position: 1280 } ]
+  @UI.lineItem:       [ { position: 1280 } ]
+  Zfcone;
+
+  @UI.identification: [ { position: 1290 } ]
+  @UI.lineItem:       [ { position: 1290 } ]
+  Zstre;
+
+  @UI.lineItem:       [ { position: 110 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M01', position: 110 } ]
+  Zemat01;
+
+  @UI.lineItem:       [ { position: 120 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M01', position: 120 } ]
+  Zecca01;
+
+  @UI.lineItem:       [ { position: 130 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M01', position: 130 } ]
+  Zecef01;
+
+  @UI.lineItem:       [ { position: 140 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M01', position: 140 } ]
+  Zecag01;
+
+  @UI.lineItem:       [ { position: 150 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M01', position: 150 } ]
+  Zeccd01;
+
+  @UI.lineItem:       [ { position: 160 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M01', position: 160 } ]
+  Zever01;
+
+  @UI.lineItem:       [ { position: 170 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M01', position: 170 } ]
+  Zecon01;
+
+  @UI.lineItem:       [ { position: 180 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M02', position: 180 } ]
+  Zemat02;
+
+  @UI.lineItem:       [ { position: 190 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M02', position: 190 } ]
+  Zecca02;
+
+  @UI.lineItem:       [ { position: 200 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M02', position: 200 } ]
+  Zecef02;
+
+  @UI.lineItem:       [ { position: 210 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M02', position: 210 } ]
+  Zecag02;
+
+  @UI.lineItem:       [ { position: 220 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M02', position: 220 } ]
+  Zeccd02;
+
+  @UI.lineItem:       [ { position: 230 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M02', position: 230 } ]
+  Zever02;
+
+  @UI.lineItem:       [ { position: 240 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M02', position: 240 } ]
+  Zecon02;
+
+  @UI.lineItem:       [ { position: 250 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M03', position: 250 } ]
+  Zemat03;
+
+  @UI.lineItem:       [ { position: 260 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M03', position: 260 } ]
+  Zecca03;
+
+  @UI.lineItem:       [ { position: 270 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M03', position: 270 } ]
+  Zecef03;
+
+  @UI.lineItem:       [ { position: 280 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M03', position: 280 } ]
+  Zecag03;
+
+  @UI.lineItem:       [ { position: 290 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M03', position: 290 } ]
+  Zeccd03;
+
+  @UI.lineItem:       [ { position: 300 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M03', position: 300 } ]
+  Zever03;
+
+  @UI.lineItem:       [ { position: 310 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M03', position: 310 } ]
+  Zecon03;
+
+  @UI.lineItem:       [ { position: 320 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q1', position: 320 } ]
+  Zemat1;
+
+  @UI.lineItem:       [ { position: 330 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q1', position: 330 } ]
+  Zecca1;
+
+  @UI.lineItem:       [ { position: 340 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q1', position: 340 } ]
+  Zecef1;
+
+  @UI.lineItem:       [ { position: 350 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q1', position: 350 } ]
+  Zecag1;
+
+  @UI.lineItem:       [ { position: 360 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q1', position: 360 } ]
+  Zeccd1;
+
+  @UI.lineItem:       [ { position: 370 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q1', position: 370 } ]
+  Zever1;
+
+  @UI.lineItem:       [ { position: 380 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q1', position: 380 } ]
+  Zecon1;
+
+  @UI.lineItem:       [ { position: 390 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M04', position: 390 } ]
+  Zemat04;
+
+  @UI.lineItem:       [ { position: 400 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M04', position: 400 } ]
+  Zecca04;
+
+  @UI.lineItem:       [ { position: 410 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M04', position: 410 } ]
+  Zecef04;
+
+  @UI.lineItem:       [ { position: 420 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M04', position: 420 } ]
+  Zecag04;
+
+  @UI.lineItem:       [ { position: 430 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M04', position: 430 } ]
+  Zeccd04;
+
+  @UI.lineItem:       [ { position: 440 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M04', position: 440 } ]
+  Zever04;
+
+  @UI.lineItem:       [ { position: 450 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M04', position: 450 } ]
+  Zecon04;
+
+  @UI.lineItem:       [ { position: 460 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M05', position: 460 } ]
+  Zemat05;
+
+  @UI.lineItem:       [ { position: 470 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M05', position: 470 } ]
+  Zecca05;
+
+  @UI.lineItem:       [ { position: 480 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M05', position: 480 } ]
+  Zecef05;
+
+  @UI.lineItem:       [ { position: 490 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M05', position: 490 } ]
+  Zecag05;
+
+  @UI.lineItem:       [ { position: 500 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M05', position: 500 } ]
+  Zeccd05;
+
+  @UI.lineItem:       [ { position: 510 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M05', position: 510 } ]
+  Zever05;
+
+  @UI.lineItem:       [ { position: 520 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M05', position: 520 } ]
+  Zecon05;
+
+  @UI.lineItem:       [ { position: 530 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M06', position: 530 } ]
+  Zemat06;
+
+  @UI.lineItem:       [ { position: 540 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M06', position: 540 } ]
+  Zecca06;
+
+  @UI.lineItem:       [ { position: 550 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M06', position: 550 } ]
+  Zecef06;
+
+  @UI.lineItem:       [ { position: 560 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M06', position: 560 } ]
+  Zecag06;
+
+  @UI.lineItem:       [ { position: 570 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M06', position: 570 } ]
+  Zeccd06;
+
+  @UI.lineItem:       [ { position: 580 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M06', position: 580 } ]
+  Zever06;
+
+  @UI.lineItem:       [ { position: 590 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M06', position: 590 } ]
+  Zecon06;
+
+  @UI.lineItem:       [ { position: 600 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q2', position: 600 } ]
+  Zemat2;
+
+  @UI.lineItem:       [ { position: 610 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q2', position: 610 } ]
+  Zecca2;
+
+  @UI.lineItem:       [ { position: 620 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q2', position: 620 } ]
+  Zecef2;
+
+  @UI.lineItem:       [ { position: 630 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q2', position: 630 } ]
+  Zecag2;
+
+  @UI.lineItem:       [ { position: 640 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q2', position: 640 } ]
+  Zeccd2;
+
+  @UI.lineItem:       [ { position: 650 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q2', position: 650 } ]
+  Zever2;
+
+  @UI.lineItem:       [ { position: 660 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q2', position: 660 } ]
+  Zecon2;
+
+  @UI.lineItem:       [ { position: 670 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M07', position: 670 } ]
+  Zemat07;
+
+  @UI.lineItem:       [ { position: 680 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M07', position: 680 } ]
+  Zecca07;
+
+  @UI.lineItem:       [ { position: 690 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M07', position: 690 } ]
+  Zecef07;
+
+  @UI.lineItem:       [ { position: 700 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M07', position: 700 } ]
+  Zecag07;
+
+  @UI.lineItem:       [ { position: 710 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M07', position: 710 } ]
+  Zeccd07;
+
+  @UI.lineItem:       [ { position: 720 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M07', position: 720 } ]
+  Zever07;
+
+  @UI.lineItem:       [ { position: 730 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M07', position: 730 } ]
+  Zecon07;
+
+  @UI.lineItem:       [ { position: 740 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M08', position: 740 } ]
+  Zemat08;
+
+  @UI.lineItem:       [ { position: 750 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M08', position: 750 } ]
+  Zecca08;
+
+  @UI.lineItem:       [ { position: 760 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M08', position: 760 } ]
+  Zecef08;
+
+  @UI.lineItem:       [ { position: 770 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M08', position: 770 } ]
+  Zecag08;
+
+  @UI.lineItem:       [ { position: 780 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M08', position: 780 } ]
+  Zeccd08;
+
+  @UI.lineItem:       [ { position: 790 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M08', position: 790 } ]
+  Zever08;
+
+  @UI.lineItem:       [ { position: 800 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M08', position: 800 } ]
+  Zecon08;
+
+  @UI.lineItem:       [ { position: 810 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M09', position: 810 } ]
+  Zemat09;
+
+  @UI.lineItem:       [ { position: 820 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M09', position: 820 } ]
+  Zecca09;
+
+  @UI.lineItem:       [ { position: 830 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M09', position: 830 } ]
+  Zecef09;
+
+  @UI.lineItem:       [ { position: 840 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M09', position: 840 } ]
+  Zecag09;
+
+  @UI.lineItem:       [ { position: 850 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M09', position: 850 } ]
+  Zeccd09;
+
+  @UI.lineItem:       [ { position: 860 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M09', position: 860 } ]
+  Zever09;
+
+  @UI.lineItem:       [ { position: 870 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M09', position: 870 } ]
+  Zecon09;
+
+  @UI.lineItem:       [ { position: 880 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q3', position: 880 } ]
+  Zemat3;
+
+  @UI.lineItem:       [ { position: 890 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q3', position: 890 } ]
+  Zecca3;
+
+  @UI.lineItem:       [ { position: 900 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q3', position: 900 } ]
+  Zecef3;
+
+  @UI.lineItem:       [ { position: 910 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q3', position: 910 } ]
+  Zecag3;
+
+  @UI.lineItem:       [ { position: 920 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q3', position: 920 } ]
+  Zeccd3;
+
+  @UI.lineItem:       [ { position: 930 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q3', position: 930 } ]
+  Zever3;
+
+  @UI.lineItem:       [ { position: 940 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q3', position: 940 } ]
+  Zecon3;
+
+  @UI.lineItem:       [ { position: 950 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M10', position: 950 } ]
+  Zemat10;
+
+  @UI.lineItem:       [ { position: 960 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M10', position: 960 } ]
+  Zecca10;
+
+  @UI.lineItem:       [ { position: 970 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M10', position: 970 } ]
+  Zecef10;
+
+  @UI.lineItem:       [ { position: 980 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M10', position: 980 } ]
+  Zecag10;
+
+  @UI.lineItem:       [ { position: 990 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M10', position: 990 } ]
+  Zeccd10;
+
+  @UI.lineItem:       [ { position: 1000 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M10', position: 1000 } ]
+  Zever10;
+
+  @UI.lineItem:       [ { position: 1010 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M10', position: 1010 } ]
+  Zecon10;
+
+  @UI.lineItem:       [ { position: 1020 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M11', position: 1020 } ]
+  Zemat11;
+
+  @UI.lineItem:       [ { position: 1030 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M11', position: 1030 } ]
+  Zecca11;
+
+  @UI.lineItem:       [ { position: 1040 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M11', position: 1040 } ]
+  Zecef11;
+
+  @UI.lineItem:       [ { position: 1050 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M11', position: 1050 } ]
+  Zecag11;
+
+  @UI.lineItem:       [ { position: 1060 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M11', position: 1060 } ]
+  Zeccd11;
+
+  @UI.lineItem:       [ { position: 1070 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M11', position: 1070 } ]
+  Zever11;
+
+  @UI.lineItem:       [ { position: 1080 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M11', position: 1080 } ]
+  Zecon11;
+
+  @UI.lineItem:       [ { position: 1090 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M12', position: 1090 } ]
+  Zemat12;
+
+  @UI.lineItem:       [ { position: 1100 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M12', position: 1100 } ]
+  Zecca12;
+
+  @UI.lineItem:       [ { position: 1110 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M12', position: 1110 } ]
+  Zecef12;
+
+  @UI.lineItem:       [ { position: 1120 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M12', position: 1120 } ]
+  Zecag12;
+
+  @UI.lineItem:       [ { position: 1130 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M12', position: 1130 } ]
+  Zeccd12;
+
+  @UI.lineItem:       [ { position: 1140 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M12', position: 1140 } ]
+  Zever12;
+
+  @UI.lineItem:       [ { position: 1150 } ]
+  @UI.fieldGroup:     [ { qualifier: 'M12', position: 1150 } ]
+  Zecon12;
+
+  @UI.lineItem:       [ { position: 1160 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q4', position: 1160 } ]
+  Zemat4;
+
+  @UI.lineItem:       [ { position: 1170 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q4', position: 1170 } ]
+  Zecca4;
+
+  @UI.lineItem:       [ { position: 1180 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q4', position: 1180 } ]
+  Zecef4;
+
+  @UI.lineItem:       [ { position: 1190 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q4', position: 1190 } ]
+  Zecag4;
+
+  @UI.lineItem:       [ { position: 1200 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q4', position: 1200 } ]
+  Zeccd4;
+
+  @UI.lineItem:       [ { position: 1210 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q4', position: 1210 } ]
+  Zever4;
+
+  @UI.lineItem:       [ { position: 1220 } ]
+  @UI.fieldGroup:     [ { qualifier: 'Q4', position: 1220 } ]
+  Zecon4;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  ChangedBy;
+
+  @UI.hidden: true
+  ChangedAt;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

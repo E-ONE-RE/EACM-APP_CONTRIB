@@ -1,0 +1,5 @@
+CLASS /eacm/bp_r_zprfisc DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF /eacm/r_zprfisc.
+ENDCLASS.
+
+CLASS /eacm/bp_r_zprfisc IMPLEMENTATION.
+ENDCLASS.

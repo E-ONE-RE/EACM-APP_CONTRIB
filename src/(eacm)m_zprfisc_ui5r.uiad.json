@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "{{appDescription}}",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "FISC History"
+  },
+  "ui5AppDetails": {
+    "appId": "eacm.zprfisc"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_09350B4E960D36C075868F29F4C264E34518C9F1_TM",
+    "semanticObject": "ZEACM_ZPRFISC",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_09350B4E960D36C075868F29F4C264E34518C9F1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "FISC History"
+      }
+    }
+  ]
+}
