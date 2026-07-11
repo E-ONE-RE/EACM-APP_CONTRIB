@@ -557,10 +557,15 @@ DATA: lv_tman TYPE c.
 *        WHERE Supplier = @ls_zpren-lifnr
 *        INTO @ls_rec2-cdfisc.
 
+      select single stcd1
+         from /eacm/bp_cache
+         where business_partner = @ls_zpren-lifnr
+         INTO @ls_rec2-cdfisc.
+
       IF sy-subrc <> 0.
         APPEND VALUE #(
           msgty = 'W'
-          text  = |Fornitore { ls_zpren-lifnr } non trovato in I_Supplier.| )
+          text  = |Fornitore { ls_zpren-lifnr } non trovato in /eacm/bp_cache.| )
           TO et_messages.
       ELSEIF ls_rec2-cdfisc IS INITIAL.
         APPEND VALUE #(

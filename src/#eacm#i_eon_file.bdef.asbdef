@@ -1,0 +1,37 @@
+managed implementation in class /EACM/BP_I_EON_FILE unique;
+strict ( 2 );
+
+define behavior for /EACM/I_EON_FILE alias EonFile
+persistent table /eacm/eon_file
+lock master
+with additional save
+authorization master ( global )
+{
+  create;
+  delete;
+
+  static action GenerateEnasarcoOnline parameter /EACM/A_EON_PAR;
+
+  field ( numbering : managed, readonly ) FileUuid;
+
+  mapping for /eacm/eon_file
+  {
+    FileUuid     = file_uuid;
+    CreatedBy    = created_by;
+    CreatedAt    = created_at;
+    Bukrs        = bukrs;
+    Zcdaz        = zcdaz;
+    Ztpag        = ztpag;
+    Prot         = prot;
+    Ditta        = ditta;
+    Cf           = cf;
+    Gjahr        = gjahr;
+    Trimes       = trimes;
+    Firr         = firr;
+    SplitCessati = split_cessati;
+    FileName     = file_name;
+    MimeType     = mime_type;
+    FileSize     = file_size;
+    FileContent  = file_content;
+  }
+}

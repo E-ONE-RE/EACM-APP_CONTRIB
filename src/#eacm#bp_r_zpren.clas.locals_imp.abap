@@ -15,10 +15,9 @@ CLASS LHC_/EACM/R_ZPREN DEFINITION INHERITING FROM CL_ABAP_BEHAVIOR_HANDLER.
       IMPORTING keys FOR ACTION /eacm/rZpren~calculateEnasarco.
 *      RESULT result.
 
-    METHODS GenerateEnasarcoOnline
-      FOR MODIFY
-      IMPORTING keys FOR ACTION /eacm/rZpren~GenerateEnasarcoOnline.
-*      RESULT result.
+*    METHODS GenerateEnasarcoOnline
+*      FOR MODIFY
+*      IMPORTING keys FOR ACTION /eacm/rZpren~GenerateEnasarcoOnline.
 
 ENDCLASS.
 
@@ -643,77 +642,77 @@ endif.
 
 
 ENDMETHOD.
-
-  METHOD GenerateEnasarcoOnline.
-
-    DATA(lo_generator) = NEW /eacm/cl_eon_generator( ).
-
-    LOOP AT keys ASSIGNING FIELD-SYMBOL(<ls_key>).
-      DATA(lv_today) = cl_abap_context_info=>get_system_date( ).
-      DATA lv_default_trimes TYPE c LENGTH 1.
-
-      lv_default_trimes = COND #(
-        WHEN lv_today+4(2) <= '03' THEN '1'
-        WHEN lv_today+4(2) <= '06' THEN '2'
-        WHEN lv_today+4(2) <= '09' THEN '3'
-        ELSE '4' ).
-
-      DATA(ls_selection) = VALUE /EACM/A_EON_PAR(
-        bukrs         = <ls_key>-%param-Bukrs
-        gjahr         = <ls_key>-%param-Gjahr
-        trimes        = COND #( WHEN <ls_key>-%param-Trimes IS NOT INITIAL
-                                THEN <ls_key>-%param-Trimes
-                                ELSE lv_default_trimes )
-        prot          = <ls_key>-%param-Prot
-        ditta         = <ls_key>-%param-Ditta
-        cf            = <ls_key>-%param-Cf
-        firr          = xsdbool( <ls_key>-%param-Firr = abap_true )
-        SplitCessati  = xsdbool( <ls_key>-%param-SplitCessati = abap_true )
-        zcdaz         = <ls_key>-%param-Zcdaz
-        ztpag         = <ls_key>-%param-Ztpag ).
-
-      lo_generator->generate(
-        EXPORTING
-          is_selection        = ls_selection
-        IMPORTING
-          et_file_lines       = DATA(lt_file_lines)
-          et_cessati_lines    = DATA(lt_cessati_lines)
-          et_messages         = DATA(lt_messages)
-          ev_filename         = DATA(lv_filename)
-          ev_cessati_filename = DATA(lv_cessati_filename) ).
-
-      LOOP AT lt_messages INTO DATA(ls_message).
-        APPEND VALUE #(
-          %msg = new_message_with_text(
-            severity = SWITCH #( ls_message-msgty
-              WHEN 'E' THEN if_abap_behv_message=>severity-error
-              WHEN 'W' THEN if_abap_behv_message=>severity-warning
-              WHEN 'S' THEN if_abap_behv_message=>severity-success
-              ELSE if_abap_behv_message=>severity-information )
-            text = ls_message-text ) )
-          TO reported-/eacm/rzpren.
-      ENDLOOP.
-
-      IF line_exists( lt_messages[ msgty = 'E' ] ).
-        CONTINUE.
-      ENDIF.
-
-      APPEND VALUE #(
-        %msg = new_message_with_text(
-          severity = if_abap_behv_message=>severity-success
-          text     = |File { lv_filename } generato in memoria: { lines( lt_file_lines ) } righe.| ) )
-        TO reported-/eacm/rzpren.
-
-      IF lt_cessati_lines IS NOT INITIAL.
-        APPEND VALUE #(
-          %msg = new_message_with_text(
-            severity = if_abap_behv_message=>severity-information
-            text     = |File cessati { lv_cessati_filename } generato in memoria: { lines( lt_cessati_lines ) } righe.| ) )
-          TO reported-/eacm/rzpren.
-      ENDIF.
-    ENDLOOP.
-
-  ENDMETHOD.
+*
+*  METHOD GenerateEnasarcoOnline.
+*
+*    DATA(lo_generator) = NEW /eacm/cl_eon_generator( ).
+*
+*    LOOP AT keys ASSIGNING FIELD-SYMBOL(<ls_key>).
+*      DATA(lv_today) = cl_abap_context_info=>get_system_date( ).
+*      DATA lv_default_trimes TYPE c LENGTH 1.
+*
+*      lv_default_trimes = COND #(
+*        WHEN lv_today+4(2) <= '03' THEN '1'
+*        WHEN lv_today+4(2) <= '06' THEN '2'
+*        WHEN lv_today+4(2) <= '09' THEN '3'
+*        ELSE '4' ).
+*
+*      DATA(ls_selection) = VALUE /EACM/A_EON_PAR(
+*        bukrs         = <ls_key>-%param-Bukrs
+*        gjahr         = <ls_key>-%param-Gjahr
+*        trimes        = COND #( WHEN <ls_key>-%param-Trimes IS NOT INITIAL
+*                                THEN <ls_key>-%param-Trimes
+*                                ELSE lv_default_trimes )
+*        prot          = <ls_key>-%param-Prot
+*        ditta         = <ls_key>-%param-Ditta
+*        cf            = <ls_key>-%param-Cf
+*        firr          = xsdbool( <ls_key>-%param-Firr = abap_true )
+*        SplitCessati  = xsdbool( <ls_key>-%param-SplitCessati = abap_true )
+*        zcdaz         = <ls_key>-%param-Zcdaz
+*        ztpag         = <ls_key>-%param-Ztpag ).
+*
+*      lo_generator->generate(
+*        EXPORTING
+*          is_selection        = ls_selection
+*        IMPORTING
+*          et_file_lines       = DATA(lt_file_lines)
+*          et_cessati_lines    = DATA(lt_cessati_lines)
+*          et_messages         = DATA(lt_messages)
+*          ev_filename         = DATA(lv_filename)
+*          ev_cessati_filename = DATA(lv_cessati_filename) ).
+*
+*      LOOP AT lt_messages INTO DATA(ls_message).
+*        APPEND VALUE #(
+*          %msg = new_message_with_text(
+*            severity = SWITCH #( ls_message-msgty
+*              WHEN 'E' THEN if_abap_behv_message=>severity-error
+*              WHEN 'W' THEN if_abap_behv_message=>severity-warning
+*              WHEN 'S' THEN if_abap_behv_message=>severity-success
+*              ELSE if_abap_behv_message=>severity-information )
+*            text = ls_message-text ) )
+*          TO reported-/eacm/rzpren.
+*      ENDLOOP.
+*
+*      IF line_exists( lt_messages[ msgty = 'E' ] ).
+*        CONTINUE.
+*      ENDIF.
+*
+*      APPEND VALUE #(
+*        %msg = new_message_with_text(
+*          severity = if_abap_behv_message=>severity-success
+*          text     = |File { lv_filename } generato in memoria: { lines( lt_file_lines ) } righe.| ) )
+*        TO reported-/eacm/rzpren.
+*
+*      IF lt_cessati_lines IS NOT INITIAL.
+*        APPEND VALUE #(
+*          %msg = new_message_with_text(
+*            severity = if_abap_behv_message=>severity-information
+*            text     = |File cessati { lv_cessati_filename } generato in memoria: { lines( lt_cessati_lines ) } righe.| ) )
+*          TO reported-/eacm/rzpren.
+*      ENDIF.
+*    ENDLOOP.
+*
+*  ENDMETHOD.
 
 
 ENDCLASS.

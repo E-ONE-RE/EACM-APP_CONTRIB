@@ -40,8 +40,8 @@ authorization master( global )
   static action calculateEnasarco
     parameter /eacm/A_CALC_ENAS_PAR;
 
-  static action GenerateEnasarcoOnline
-    parameter /EACM/A_EON_PAR;
+//  static action GenerateEnasarcoOnline
+//    parameter /EACM/A_EON_PAR;
 
   draft action Activate optimized;
   draft action Discard;

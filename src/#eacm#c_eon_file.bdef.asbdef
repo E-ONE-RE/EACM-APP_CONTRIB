@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+
+define behavior for /EACM/C_EON_FILE alias EonFile
+{
+  use create;
+  use delete;
+  use action GenerateEnasarcoOnline;
+}

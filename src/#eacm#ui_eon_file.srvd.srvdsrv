@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition Enasarco on-line'
+define service /EACM/UI_EON_FILE {
+  expose /EACM/C_EON_FILE;
+}

@@ -152,7 +152,7 @@ annotate view /EACM/C_ZPREN with
  @UI.lineItem: [
   { position: 5,    type: #FOR_ACTION,    dataAction: 'calculateEnasarco',    label: 'Calcole Enasarco' },
   { position: 10,    type: #FOR_ACTION,   dataAction: 'PostEnasarco',   label: 'Post Enasarco' },
-  { position: 15,    type: #FOR_ACTION,   dataAction: 'GenerateEnasarcoOnline',   label: 'Enasaco on-line' },
+//  { position: 15,    type: #FOR_ACTION,   dataAction: 'GenerateEnasarcoOnline',   label: 'Enasaco on-line' },
   { position: 20 }
 ]  
   @UI.identification: [ { position: 20 } ]
